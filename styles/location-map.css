@@ -1,0 +1,50 @@
+section.location-map .location-map-container{
+    max-width: 1080px;
+
+}
+
+section.location-map {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+
+div.location-header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 208px;
+}
+
+div.location-header .container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}   
+
+div.location-header img.location-header-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+div.location-header img.pin-icon{
+    height: 50px;
+    margin-top: 5px;
+}
+
+div.location-header h1 {
+    z-index: 2;
+    font-size: 4rem;
+    transform: skew(-10deg);
+    color: white;
+}

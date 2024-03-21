@@ -1,0 +1,72 @@
+html {
+}
+
+body {
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: 'AmsiPro-Bold';
+    src: url('/fonts/AmsiPro-Bold.otf') format('woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'AmsiPro-BoldItalic';
+    src: url('/fonts/AmsiPro-BoldItalic.otf') format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'AmsiPro-Regular';
+    src: url('/fonts/AmsiPro-Regular.otf') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'AmsiPro-Italic';
+    src: url('/fonts/AmsiPro-Italic.otf') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'AmsiPro-Italic';
+    src: url('/fonts/AmsiProCond-Italic.otf') format('woff2');
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'AmsiPro-Light';
+    src: url('/fonts/AmsiPro-Light.otf') format('woff2');
+    font-weight: 400;
+
+}
+
+
+p {
+    font-family: 'AmsiPro-Regular';
+    color: #3D3E42;
+}
+
+h1 {
+    font-family: 'AmsiPro-Bold';
+    color: #414143;
+}
+
+strong {
+    font-family: 'AmsiPro-Bold';
+}
+
+span {
+    font-family: 'AmsiPro-Light';
+}
