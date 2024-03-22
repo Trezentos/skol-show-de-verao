@@ -4,9 +4,7 @@ section.about-content {
     background-color: #F3F4F9;
     display: flex;
     justify-content: space-between;
-
     
-    /* gap: 4rem; */
 }
 
 section.about-content .about-container {
