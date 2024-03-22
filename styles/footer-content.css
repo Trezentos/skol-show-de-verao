@@ -26,13 +26,13 @@
     
 }
 .footer-content button.up-button::after{
-    content: '^'; /* Representa a seta para cima */
+    content: '^'; 
     position: absolute;
     left: 50%;
     top: 60%;
     transform: translate(-50%, -50%);
-    color: #F7E135; /* Cor da seta */
-    font-size: 20px; /* Tamanho da seta */
+    color: #F7E135; 
+    font-size: 20px; 
 }
 
 .footer-content .sponsor-container {

@@ -7,8 +7,6 @@ section.location-map #map {
     }
 }
 
-
-
 div.location-header{
     display: flex;
     justify-content: flex-start;
