@@ -2,6 +2,7 @@ html {
 }
 
 body {
+    position: relative;
 }
 
 * {
@@ -56,17 +57,40 @@ button {
 p {
     font-family: 'AmsiPro-Regular';
     color: #3D3E42;
+    font-size: 1rem;
+
+
+    @media (max-width: 758px) {
+        font-size: 0.9rem;
+    }
 }
 
 h1 {
     font-family: 'AmsiPro-Bold';
     color: #414143;
+    font-size: 4rem;
+
+    @media (max-width: 758px) {
+        font-size: 3rem;
+    }
 }
 
 strong {
-    font-family: 'AmsiPro-Bold';
+    font-family: 'AmsiPro-BoldItalic';
+    font-size: 1rem;
+
+    @media(max-width: 768px){
+        font-size: 0.9rem;
+    }
 }
 
 span {
     font-family: 'AmsiPro-Light';
+}
+
+a {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
 }

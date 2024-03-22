@@ -4,10 +4,8 @@ section.location-content {
     gap: 1rem;
     padding: 3rem 1rem;
     background-color: #EDD51B;
-
-    @media(max-width: 768px){
-        height: fit-content;
-    }
+    margin-top: 10rem;
+   
 }
 
 section.location-content .location-container {
@@ -18,11 +16,10 @@ section.location-content .location-container {
     width: 100%;
     max-width: 1080px;
 
-    @media(max-width: 768px){
-        flex-direction: column;
-        gap: 25rem;
-    }
+
 }
+
+
 
 section.location-content::before {
     content: '';
@@ -32,114 +29,12 @@ section.location-content::before {
     width: 100%;
     height: 100%;
     z-index: 0;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
-}
-
-section.location-content div.location-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;;
-    justify-content: center;
-    gap: 1.5rem;
-    cursor: pointer;
-    height: fit-content;
-    z-index: 2;
-}
-
-div.location-card div.circle-image-location {
-    border: 4px solid #BD8902;
-    /* padding: 2rem; */
-    background-image: url('/assets/locationIcon-1t.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    overflow: hidden;
-    height: 160px;
-    width: 160px;
-    transition: border .2s;
-}
-
-div.location-card:hover div.circle-image-location {
-    background-image: url('/assets/locationIcon-2t.png');
-    border-color: #AF0039;
-
-}
-
-.location-card strong {
-    color: #BD8902;
-    transition: color .2s;
-    font-size: 1.6rem;
-    transform: skew(-10deg);
-}
-.location-card:hover strong {
-    color: #AF0039;
-}
-
-.location-card button{
-  background-color: transparent;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  border: none;
-  color: #BD8902;
-  text-transform: uppercase;
-  font-weight: 100;
-  transition: border .2s, color .2s;
-  position: relative;
-
-}
-
-.location-card:hover button {
-    color: #AF0039;
-    
+    /* box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5); */
 }
 
 
-.location-card button::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left:0;
-    border: 1px solid #BD8902;
-    border-radius: 5px;
-    z-index: -2;
-    transform: skew(-10deg);
-}
-
-.location-card:hover button::after{
-    border: 1px solid #AF0039;
-
-}
-
-.location-card button::before {
-    content: '';
-    position: absolute;
-    transform: skew(-10deg) rotate(0deg);
-    transition: transform 200ms, transform 200ms;
-    top: 0;
-    left: 1px;
-    border: 1px solid transparent;
 
 
-}
 
-.location-card:hover button::before{
-    width: 98.5%;
-    height: 100%;
-    border-radius: 5px;
-    z-index: -2;
-    transform: skew(-10deg) rotate(-3.5deg);
-    border: 1px solid white;
-    
-}
 
-section.location-content img.location-footer {
-    position: absolute;
-    bottom: -2rem;
-    right: 0;
 
-}

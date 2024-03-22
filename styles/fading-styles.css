@@ -1,0 +1,42 @@
+.visible {
+    opacity: 0;
+    -webkit-animation: fadeIn 0.9s 1;
+    animation: fadeIn 1000ms 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.visible:nth-of-type(2){
+    opacity: 0;
+    animation: fadeIn 1500ms 1;
+    animation-fill-mode: forwards;
+}
+.visible:nth-of-type(3){
+    opacity: 0;
+    animation: fadeIn 2000ms 1;
+    animation-fill-mode: forwards;
+}
+.visible:nth-of-type(4){
+    opacity: 0;
+    animation: fadeIn 2500ms 1;
+    animation-fill-mode: forwards;
+}
+  
+
+@-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0.0;
+    }
+    100% {
+      opacity: 1.0;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0.0;
+    }
+    100% {
+      opacity: 1.0;
+    }
+  }

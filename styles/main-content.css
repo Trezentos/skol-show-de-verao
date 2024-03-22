@@ -1,20 +1,66 @@
 section.main-content {
-    min-height: 1328px;
     width: 100%;
+    height: 1700px;
     background-image: url('/assets/main-content.jpg');
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     object-fit: cover;
     display: flex;
     justify-content: center;
-    
+    position: relative;
 
     @media(max-width: 768px){
+        height: fit-content;
         background-image: url('/assets/main-content-mobile.jpg');
         background-size: 100%;
-        background-position: top;
-        min-height: fit-content;
-        padding-top: 30rem
+
+    }
+
+
+  
+}
+
+
+
+section.main-content img.logo-skol{
+    position: absolute;
+    top: 225px;
+    right: 50%;
+    transform: translate(49%);
+    z-index: 2;
+    animation: girarEEntrar 700ms ease-in-out forwards;
+    transform-origin: center;
+
+    @media (max-width: 768px) {
+        right: 49%;
+        width: 66vw;
+        top: 28vw;
+    }
+
+}
+
+
+@keyframes girarEEntrar {
+    0% {
+        transform: translateY(-500px) translate(49%) rotate(180deg); /* Começa de lado */
+    }
+
+    100% {
+        transform: translateY(0px) translate(49%); /* Termina de frente */
+        opacity: 1;
+
+    }
+}
+
+section.main-content div.background-container{
+    width: 100%;
+    background-color: #EDD51B;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+
+    @media(max-width: 768px){
+        display: none;
     }
 }
 
@@ -26,27 +72,231 @@ section.main-content .main-content-container {
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
     align-items: flex-end;
     z-index: 0;
 
+   
     @media(max-width: 768px){
-        /* flex-direction: column; */
-        align-items: center;
+        margin-top: 25rem;
         flex-wrap: wrap;
     }
-}
 
-section.main-content .main-content-container .event-card img{
-    @media(max-width: 768px){
-        width: 120px;
+    @media(min-width: 768px )and(max-width: 1024px){
+        margin-top: 30rem;
     }
 }
 
-section.main-content div {
-    margin:0;
-    padding: 0;
-    z-index: 0;
+
+section.main-content .main-content-container .background-cards{
+    position: absolute;
+    height: 332px;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 2;
+    background-color: #EDD51B;
+    pointer-events: none;
+    z-index: -1;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
 }
+
+section.main-content .main-content-container .event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    opacity: 0;
+
+
+    @media(max-width: 768px){
+        flex: 1;
+        padding: 0;
+    }
+}
+
+section.main-content .main-content-container .event-card img {
+    cursor: pointer;
+    @media(max-width: 768px){
+        width: 150px;   
+    }
+
+    @media (min-width: 768px) and (max-width: 1025px) {
+        width: 200px;   
+
+    }
+}
+
+
+section.main-content .event-card .location-card{
+    background-color: #EDD51B;
+    padding-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+section.main-content .event-card .location-card:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 100%;
+    border-bottom: none;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+    background-color: #EDD51B;
+}
+
+.location-card strong {
+    color: #BD8902;
+    transition: color .2s;
+    font-size: 1.6rem;
+    
+
+    @media(max-width: 768px){
+        font-size: 1rem;
+        color: #AF0039;
+    }
+}
+
+.event-card:hover strong {
+    color: #AF0039;
+}
+
+section.main-content .event-card:hover > img {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+section.main-content .location-card button{
+  background-color: transparent;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  border: none;
+  color: #BD8902;
+  text-transform: uppercase;
+  font-weight: 100;
+  transition: border .2s, color .2s;
+  position: relative;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 10px 10px;
+    color: #AF0039;
+
+  }
+}
+
+.event-card button span {
+    font-family: 'AmsiPro-Italic';
+    letter-spacing: 0.1rem;
+
+}
+.event-card:hover button span {
+    color: #AF0039;
+    font-family: 'AmsiPro-Italic';
+
+}
+
+
+.location-card button::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    border: 1px solid #BD8902;
+    border-radius: 5px;
+    z-index: -2;
+    transform: skew(-10deg);
+}
+
+.event-card:hover button::after{
+    border: 1px solid #AF0039;
+
+}
+
+.location-card button::before {
+    content: '';
+    position: absolute;
+    transform: skew(-10deg) rotate(0deg);
+    transition: transform 200ms, transform 200ms;
+    top: 0;
+    left: 1px;
+    border: 1px solid transparent;
+}
+
+.event-card:hover button::before{
+    width: 98.5%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -2;
+    transform: skew(-10deg) rotate(-3.5deg);
+    border: 1px solid white;
+}
+
+
+section.main-content img.location-footer {
+    position: absolute;
+    bottom: -6rem;
+    right: 0;
+
+    @media(max-width: 768px){
+        bottom: -6rem;
+    }
+}
+
+section.main-content div.location-card div.circle-image-location {
+    border: 4px solid #BD8902;
+    /* padding: 2rem; */
+    background-image: url('/assets/locationIcon-1t.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 160px;
+    width: 160px;
+    transition: border .2s;
+
+    @media(max-width: 768px){
+        height: 120px;
+        width: 120px;
+        background-size: 50%;
+        border: 4px solid #AF0039;
+        background-image: url('/assets/locationIcon-2t.png');
+    }
+}
+
+section.main-content div.event-card:hover div.circle-image-location {
+    background-image: url('/assets/locationIcon-2t.png');
+    border-color: #AF0039;
+
+    @media(max-width: 768px){
+        background-size: 50%;
+    }
+}
+
+
+
+
+
 
 

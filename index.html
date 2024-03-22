@@ -3,71 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skol Show de Verão: uma série de eventos para animar seu verão com a melhor música e entretenimento.">
+    <meta name="keywords" content="Skol, Show de Verão, música, entretenimento, festa, verão">
+    <meta name="keywords" content="Skol">
     <title>Skol | Show de Verão</title>
     <link rel="stylesheet" href="styles/main-content.css">
     <link rel="stylesheet" href="styles/location-content.css">
     <link rel="stylesheet" href="styles/styles-configs.css">
     <link rel="stylesheet" href="styles/about-content.css">
     <link rel="stylesheet" href="styles/location-map.css">
-    <link rel="stylesheet" href="styles/sponsors.content.css">
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyBu5zXdFa9L8jbEU8Cw-D4GonuZFRk3_KE", v: "weekly"});
-    </script>
-        
+    <link rel="stylesheet" href="styles/footer-content.css">
+    <link rel="stylesheet" href="styles/fading-styles.css">
+    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    
 </head>
 <body>
     <section class="main-content">
+        <img  class="logo-skol" src="assets/show-de-verão-main-logo.png" alt="">
         <div class="main-content-container">
             <div class="event-card">
                 <img src="/assets/event-1-card.png" alt="">
+                <div class="location-card">
+                    <strong>Mapa de Palco</strong>
+                    <div class="circle-image-location">
+                    </div>
+                    <button>
+                        <span>Clique e conheça</span>
+                    </button>
+                </div>
             </div>
             <div class="event-card" >
                 <img src="/assets/event-2-card.png" alt="">
+                <div class="location-card">
+                    <strong>Mapa de Palco</strong>
+                    <div class="circle-image-location">
+                    </div>
+                    <button>
+                        <span>Clique e conheça</span>
+                    </button>
+                </div>
             </div>
             <div class="event-card">
                 <img src="/assets/event-3-card.png" alt="">
+                <div class="location-card">
+                    <strong>Mapa de Palco</strong>
+                    <div class="circle-image-location">
+                    </div>
+                    <button>
+                        <span>Clique e conheça</span>
+                    </button>
+                </div>
             </div>
             <div class="event-card">
                 <img src="/assets/event-4-card.png" alt="">
+                <div class="location-card">
+                    <strong>Mapa de Palco</strong>
+                    <div class="circle-image-location">
+                    </div>
+                    <button>
+                        <span>Clique e conheça</span>
+                    </button>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="location-content">
-        <div class="location-container">
-            <div class="location-card">
-                <strong>Mapa de Palco</strong>
-                <div class="circle-image-location">
-                </div>
-                <button>
-                    <span>Clique e conheça</span>
-                </button>
-            </div>
-            <div class="location-card">
-                <strong>Mapa de Palco</strong>
-                <div class="circle-image-location">
-                </div>
-                <button>
-                    <span>Clique e conheça</span>
-                </button>
-            </div><div class="location-card">
-                <strong>Mapa de Palco</strong>
-                <div class="circle-image-location">
-                </div>
-                <button>
-                    <span>Clique e conheça</span>
-                </button>
-            </div><div class="location-card">
-                <strong>Mapa de Palco</strong>
-                <div class="circle-image-location">
-                </div>
-                <button>
-                    <span>Clique e conheça</span>
-                </button>
-            </div>
+            <div class="background-cards"></div>
             <img class="location-footer" src="assets/section-location-footer.png" alt="" >
         </div>
+        
     </section>
-    <section class="about-content">
+     <section class="about-content">
         <div class="about-container">
             <div class="about-description">
                 <h1>Sobre Arena</h1>
@@ -84,27 +89,35 @@
             </div>
         </div>
     </section>
-    <!-- <section class="location-map">
+   <section class="location-map">
         <div class="location-header">
-            <img class="location-header-img" src="assets/location-header.png" alt="">
             <div class="container">
                 <img class="pin-icon" src="assets/pin-icon.png" alt="">
 
                 <h1>Localização</h1>
             </div>
         </div>
-        <div id="map" style="width: 100%; height: 400px;"></div>
+
+        <div id="map"></div>
     </section>
-    <section class="footer-content">
+   <section class="footer-content">
         <div class="sponsor-container">
             <div>
                 <h3>Realização:</h3>
-                <img src="assets/sul-logo.png" alt="">
-                <img src="assets/rk-logo.png" alt="">
+                <div>
+                    <a href="https://quax.com.br/" target="_blank">
+                        <img src="assets/sul-logo.png" alt="">
+                    </a>
+                    <a href="https://quax.com.br/" target="_blank">
+                        <img src="assets/rk-logo.png" alt="">
+                    </a>
+                </div>
             </div>
             <div>
                 <h3>Mídia <br>Partner:</h3>
-                <img src="assets/nsc-logo.png" alt="">
+                <a href="https://quax.com.br/" target="_blank">
+                    <img src="assets/nsc-logo.png" alt="">
+                </a>
             </div>
         </div>
         <div class="footer-contact">
@@ -113,45 +126,49 @@
                     <img src="assets/footer-tel.png" alt="">
                     <div>
                         <strong>Contato</strong>
-                        <p>47 <strong>3048-1850 | 99747-1212</strong> </p>
-                        <p>atendimento@showdeverão.com.br</p>
+                        <p>
+                            <strong>
+                            <a href="https://quax.com.br/" target="_blank">47 3048-1850 </a>
+                            |
+                            <a href="https://quax.com.br/" target="_blank"> 99747-1212</a>
+                            </strong> 
+                        </p>
+                        <a href="https://quax.com.br/" target="_blank"><p>atendimento@showdeverão.com.br</p></a>
                     </div>
                 </div>
                 <div class="contact-links">
                     <img src="assets/pin-tel.png" alt="">
                     <div>
                         <strong>Endereço</strong>
-                        <p>Rodovia SC-401, km 01, S/N</p>
+                        <p><a href="https://quax.com.br/" target="_blank">Rodovia SC-401, km 01, S/N</a></p>
                         <p>Trevo de Canasvieira, Florianópolis</p>
                     </div>
                 </div>
                 <div class="socials-container">
-                    <img src="/assets/facebook-footer-icon.png" alt="">
-                    <img src="/assets/insta-footer-icon.png" alt="">
-                    <img src="/assets/twitter-footer-icon.png" alt="">
-                    <img src="/assets/youtube-footer-icon.png" alt="">
+                    <a href="https://www.instagram.com/quaxweb/" target="_blank">
+                        <img src="/assets/facebook-footer-icon.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/quaxweb/" target="_blank">
+                        <img src="/assets/insta-footer-icon.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/quaxweb/" target="_blank">
+                        <img src="/assets/twitter-footer-icon.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/quaxweb/" target="_blank">
+                        <img src="/assets/youtube-footer-icon.png" alt="">
+                    </a>
                 </div>
             </div>
             <p>Copyright © 2017 Show de Verão. Todos os direitos reservados.</p>
         </div>
         <img src="assets/quax-footer-icon.png" class="quax-icon" alt="">
-    </section> -->
+        <button class="up-button"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        ></button>
+    </section> 
 </body>
-<script src="script.js" > 
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5zXdFa9L8jbEU8Cw-D4GonuZFRk3_KE&callback=initMap" >
-    let map;
+<script src="mapbox-confi.js" ></script>
+<script src="fadings-styles-script.js" ></script>
+<script></script>
 
-    async function initMap() {
-    alert('opa')
-    const { Map } = await google.maps.importLibrary("maps");
-
-    map = new Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-    });
-    }
-
-    initMap();
-</script>
 </html>

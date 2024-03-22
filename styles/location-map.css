@@ -1,24 +1,28 @@
-section.location-map .location-map-container{
-    max-width: 1080px;
-
-}
-
-section.location-map {
+section.location-map #map { 
     width: 100%;
-    position: relative;
-    height: 100vh;
+    height: 600px;
+
+    @media(max-width: 768px){
+        height: 400px;
+    }
 }
+
 
 
 div.location-header{
-    position: absolute;
-    top: 0;
-    right: 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 208px;
+
+    @media (max-width: 768px) {
+        padding-left: 2rem;
+    }
+    @media (min-width: 768px) and (max-width: 1025px) {
+        padding-left: 4rem;
+    }
+   
 }
 
 div.location-header .container {
@@ -30,11 +34,10 @@ div.location-header .container {
     gap: 1rem;
 }   
 
-div.location-header img.location-header-img{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+section.location-map .location-header{
+    height: 208px;
+    background-image: url('/assets/location-header.png');
+
 }
 
 div.location-header img.pin-icon{
@@ -43,8 +46,7 @@ div.location-header img.pin-icon{
 }
 
 div.location-header h1 {
+    font-family: 'AmsiPro-BoldItalic';
     z-index: 2;
-    font-size: 4rem;
-    transform: skew(-10deg);
     color: white;
 }
