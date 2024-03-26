@@ -82,7 +82,7 @@ section.about-content img {
     margin-top: 6rem;
     height: fit-content;
     position: absolute;
-    /* top: 60px; */
+    object-fit: cover !important;
     z-index: 1;
 
     @media (max-width: 768px) {

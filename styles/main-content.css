@@ -32,8 +32,9 @@ section.main-content img.logo-skol{
     right: 50%;
     transform: translateX(49%);
     z-index: 2;
-    animation: girarEEntrar 700ms ease-in-out forwards;
+    animation: shrinkLogo 700ms ease-in-out forwards;
     transform-origin: center;
+    opacity: 0;
 
     @media (max-width: 768px) {
         right: 49.5%;
@@ -44,14 +45,21 @@ section.main-content img.logo-skol{
 }
 
 
-@keyframes girarEEntrar {
+@keyframes shrinkLogo {
     0% {
-        transform: translateY(-500px) translate(49%) rotate(180deg); /* Começa de lado */
+       opacity: 0;
+       transform: translateX(49%) scale(1.0);
+
+    }
+
+    25%{
+        transform: translateX(49%) scale(1.1);
+
     }
 
     100% {
-        transform: translateY(0px) translate(49%); /* Termina de frente */
         opacity: 1;
+        transform: translateX(49%) scale(1.0);
 
     }
 }
